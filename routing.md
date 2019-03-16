@@ -38,7 +38,7 @@ R4 -> S2 = 10.4.4.0/24
 ```
 
 ### Configs
-<LINK>
+Configurations are located here: https://github.com/blurer/ICND2-Notes/blob/master/configs/core-routing.md
 
 ### Connectivity
 Run ``show cdp neighbor`` on each device to confirm you can see each device.
