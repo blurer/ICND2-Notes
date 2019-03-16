@@ -36,3 +36,20 @@ R4 -> S2 = 10.4.4.0/24
       |  s1  |
       +------+
 ```
+
+### Configs
+<LINK>
+
+### Connectivity
+Run ``show cdp neighbor`` on each device to confirm you can see each device.
+
+```
+R1#show cdp n
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+R2               Gig 0/0            134           R       7206VXR   Gig 0/0
+R3               Gig 1/0            161           R       7206VXR   Gig 1/0
+S1               Gig 2/0            173           R       7206VXR   Gig 2/0
+```

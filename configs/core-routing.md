@@ -93,4 +93,117 @@ login
 
 ## R2 Configuration
 
+```
+enable
+conf t
+hostname R2
+int g0/0
+ip address 10.12.12.2 255.255.255.0
+no shut
+des -> r1
+
+int g1/0
+ip addr 10.24.24.1 255.255.255.0
+no shut
+desc -> r4
+
+line con 0
+logging sync
+
+line vty 0 15
+password cisco
+login
+```
+
+## R3 Configuration
+
+```
+enable
+conf t
+hostname R3
+int g1/0
+ip address 10.13.13.3 255.255.255.0
+no shut
+des -> r1
+
+int g2/0
+ip addr 10.34.34.3 255.255.255.0
+no shut
+desc -> r4
+
+line con 0
+logging sync
+
+line vty 0 15
+password cisco
+login
+```
+
+## R4 Configuration
+
+```
+enable
+conf t
+hostname R4
+int g0/0
+ip address 10.4.4.1 255.255.255.0
+no shut
+des -> s2
+
+int g1/0
+ip addr 10.24.24.4 255.255.255.0
+no shut
+desc -> r2
+
+int g2/0
+ip addr 10.34.34.4 255.255.255.0
+no shut
+des -> r3
+exit
+enable secret cisco
+
+line con 0
+logging sync
+
+line vty 0 15
+password cisco
+login
+```
+
+## S1 Configuration
+
+```
+hostname S1
+int g2/0
+ip address 10.1.1.10 255.255.255.0
+no shut
+des -> r1
+exit
+enable secret cisco
+
+line con 0
+logging sync
+
+line vty 0 15
+password cisco
+login
+```
+
+## S2 Configuration
+```
+hostname S2
+int g0/0
+ip address 10.4.4.10 255.255.255.0
+no shut
+des -> r4
+exit
+enable secret cisco
+
+line con 0
+logging sync
+
+line vty 0 15
+password cisco
+login
+```
 
