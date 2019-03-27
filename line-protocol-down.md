@@ -48,3 +48,14 @@ R3(config-if)#
 R3(config-if)#
 *Mar 27 05:01:22.079: %DUAL-5-NBRCHANGE: EIGRP-IPv4 1: Neighbor 10.34.34.4 (Serial6/1) is up: new adjacency
 ```
+
+Confirm line protocol is up, note HDLC as encapsulation:
+```
+R3#show int s6/1
+Serial6/1 is up, line protocol is up 
+  Hardware is M4T
+  Internet address is 10.34.34.3/24
+  MTU 1500 bytes, BW 19200 Kbit/sec, DLY 20000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation HDLC, crc 16, loopback not set
+```
