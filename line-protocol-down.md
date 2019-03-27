@@ -59,3 +59,12 @@ Serial6/1 is up, line protocol is up
      reliability 255/255, txload 1/255, rxload 1/255
   Encapsulation HDLC, crc 16, loopback not set
 ```
+
+Finally, ping the far end, in this case 10.34.34.4:
+```
+R3#ping 10.34.34.4
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.34.34.4, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 44/48/52 ms
+```
